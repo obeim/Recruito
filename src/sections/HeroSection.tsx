@@ -1,10 +1,9 @@
 import Button from "../components/Button";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const HeroSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   return (
     <div
@@ -15,13 +14,13 @@ const HeroSection = () => {
         className="absolute bottom-[20%] lg:bottom-[34%] -left-24 z-0 w-1/2 lg:w-auto"
         src="hero_assets/docker-pattern-right4.png"
         initial={{ opacity: 0 }}
-        animate={{ opacity: isInView ? 1 : 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       />
       <motion.div
         className="text-4xl lg:text-6xl font-semibold leading-snug lg:leading-[1.4] w-[90%] lg:w-[80%] mx-auto"
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         Revolutionize Your Hiring Process with{" "}
@@ -31,7 +30,7 @@ const HeroSection = () => {
             src="hero_assets/double_star.png"
             className="absolute -right-5 lg:-right-9 w-5 lg:w-6 top-2"
             initial={{ scale: 0 }}
-            animate={{ scale: isInView ? 1 : 0 }}
+            whileInView={{ scale: 1 }}
             transition={{ duration: 0.5 }}
           />
         </span>
@@ -39,7 +38,7 @@ const HeroSection = () => {
       <motion.div
         className="text-base lg:text-lg text-gray-500 w-[90%] lg:w-[50%] mx-auto mt-4 lg:mt-6"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         Your fully automated hiring assistant that sources, screens, and
@@ -62,21 +61,21 @@ const HeroSection = () => {
           src="hero_assets/hero_image1.png"
           className="w-full lg:w-auto"
           initial={{ x: -100 }}
-          animate={{ x: isInView ? 0 : -100 }}
+          whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
         />
         <motion.img
           src="hero_assets/Product1.png"
           className="absolute top-20 lg:top-28 -right-10 lg:-right-20 w-1/3 lg:w-auto"
           initial={{ y: -100 }}
-          animate={{ y: isInView ? 0 : -100 }}
+          whileInView={{ y: 0 }}
           transition={{ duration: 1 }}
         />
         <motion.img
           src="hero_assets/Customers1.png"
           className="absolute bottom-5 lg:bottom-10 -left-10 lg:-left-20 w-1/3 lg:w-auto"
           initial={{ y: 100 }}
-          animate={{ y: isInView ? 0 : 100 }}
+          whileInView={{ y: 0 }}
           transition={{ duration: 1 }}
         />
       </div>

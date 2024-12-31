@@ -9,6 +9,7 @@ export default {
         neutralGray: "#848EA0",
         lightBlueGray: "#CFD8E3",
         darkGray: "#3E4757",
+        darkBlue: "#004CD3",
       },
     },
   },
