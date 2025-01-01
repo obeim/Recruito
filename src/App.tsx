@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import BenefitsSection from "./sections/BenfitsSection";
 import FAQSection from "./sections/FaqsSection";
@@ -9,7 +10,7 @@ import TrustedSection from "./sections/TrustedSection";
 
 function App() {
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <img
         className="absolute top-0 right-0 z-0 w-1/2"
         src="hero_assets/docker-pattern-right3.png"
@@ -27,6 +28,7 @@ function App() {
         <FAQSection />
         <TestimonialSection />
         <StartSection />
+        <Footer />
       </div>
     </div>
   );

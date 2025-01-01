@@ -158,3 +158,30 @@ export const faqItems: FAQItem[] = [
     `,
   },
 ];
+
+export const socialLinks = [
+  {
+    href: "https://twitter.com",
+    src: "x_logo.svg",
+    alt: "Twitter",
+    ariaLabel: "Twitter",
+  },
+  {
+    href: "https://instagram.com",
+    src: "insta_logo.svg",
+    alt: "Instagram",
+    ariaLabel: "Instagram",
+  },
+  {
+    href: "https://facebook.com",
+    src: "facebook_logo.svg",
+    alt: "Facebook",
+    ariaLabel: "Facebook",
+  },
+  {
+    href: "https://linkedin.com",
+    src: "linkedin_logo.svg",
+    alt: "LinkedIn",
+    ariaLabel: "LinkedIn",
+  },
+];
