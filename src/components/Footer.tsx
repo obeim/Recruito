@@ -3,7 +3,7 @@ import { socialLinks } from "../constants";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 py-6  border-gray-200">
+    <footer className="bg-neutralGray/5 py-6 border-gray-200">
       <div className="max-w-[90%] lg:max-w-[80%] mx-auto">
         {/* Left Section */}
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
@@ -37,13 +37,13 @@ const Footer: React.FC = () => {
           {/* Links */}
           <div className="flex items-center space-x-4">
             <a
-              href="/terms"
+              href="#"
               className="text-darkGray font-medium text-sm hover:underline"
             >
               Terms
             </a>
             <a
-              href="/privacy"
+              href="#"
               className="text-darkGray font-medium text-sm hover:underline"
             >
               Privacy

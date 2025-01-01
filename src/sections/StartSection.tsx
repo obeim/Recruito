@@ -41,7 +41,10 @@ const StartSection = () => {
           transition={{ duration: 0.25 }}
           whileHover={{ scale: 1.1 }}
         >
-          <Button text="Request a Demo" />
+          <Button
+            leftElement={<img src="stars_white.svg" />}
+            text="Request a Demo"
+          />
         </motion.div>
       </div>
     </div>

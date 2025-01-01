@@ -51,7 +51,10 @@ const HeroSection = () => {
         >
           Start Your Free Trial
         </motion.button>
-        <Button text="Request a Demo" />
+        <Button
+          leftElement={<img src="stars_white.svg" />}
+          text="Request a Demo"
+        />
       </div>
       <div className="bg-lightBlueGray/30 w-full p-4 mt-12 lg:mt-24 rounded-3xl relative">
         <p className="text-darkGray mb-4 font-medium capitalize">
