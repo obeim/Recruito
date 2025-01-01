@@ -3,6 +3,7 @@ import BenefitsSection from "./sections/BenfitsSection";
 import FAQSection from "./sections/FaqsSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import HeroSection from "./sections/HeroSection";
+import StartSection from "./sections/StartSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import TrustedSection from "./sections/TrustedSection";
 
@@ -25,6 +26,7 @@ function App() {
         <BenefitsSection />
         <FAQSection />
         <TestimonialSection />
+        <StartSection />
       </div>
     </div>
   );

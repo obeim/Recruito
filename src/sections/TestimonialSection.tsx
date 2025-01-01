@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const TestimonialSection: React.FC = () => {
   return (
-    <div className="py-12 ">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
@@ -24,32 +24,40 @@ const TestimonialSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <h2 className="text-5xl font-semibold mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">
           Don’t just take our word for it—see what our clients say about
           Recruito AI.
         </h2>
       </motion.div>
 
       <motion.div
-        className="max-w-full px-6"
+        className="max-w-full px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.4 }}
       >
         <Swiper
           pagination={{ clickable: true }}
-          spaceBetween={30}
-          slidesPerView={1}
+          spaceBetween={10}
+          centeredSlides={true}
+          loop={true}
+          // Set the initial slide to the second one (index 1)
           breakpoints={{
             640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 1.5 },
+
+            1366: { slidesPerView: 2 },
+            1440: { slidesPerView: 2.2 },
+            1920: { slidesPerView: 3 },
           }}
+          onSlideChange={(swiper) =>
+            console.log("Slide index changed to: ", swiper.activeIndex)
+          }
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="bg-white border border-neutralGray/20 rounded-lg p-6 h-[231px] w-[582px]"
+                className="bg-white border border-neutralGray/20 rounded-lg p-6 h-auto w-full sm:w-[582px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
@@ -61,11 +69,11 @@ const TestimonialSection: React.FC = () => {
                     className="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
-                    <h3 className=" font-semibold">{testimonial.name}</h3>
+                    <h3 className="font-semibold">{testimonial.name}</h3>
                     <p className="text-gray-500 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-darkGray bg-lightGray/20 rounded-lg p-5 h-28 mt-6">
+                <p className="text-darkGray bg-lightGray/20 rounded-lg p-5 h-auto mt-6">
                   <div className="text-ellipsis line-clamp-3">
                     {testimonial.feedback}
                   </div>
