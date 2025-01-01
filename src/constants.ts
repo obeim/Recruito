@@ -93,21 +93,28 @@ export const testimonials: Testimonial[] = [
     name: "Alex Martin",
     role: "Company, HR",
     feedback:
-      "Recruito has transformed our hiring process! We save countless hours each week. The quality of candidates has significantly improved since we started using Recruito.",
-    image: "https://via.placeholder.com/150",
+      "Recruito has transformed our hiring process! We save countless hours each week The quality of candidates has significantly improved since we started using Recruito",
+    image: "https://i.pravatar.cc/300",
   },
   {
     name: "Jane Doe",
     role: "Recruiter, IT",
     feedback:
-      "Recruito AI is a game-changer. It streamlined our entire workflow and helped us focus on quality over quantity.",
-    image: "https://via.placeholder.com/150",
+      "Recruito has transformed our hiring process! We save countless hours each week The quality of candidates has significantly improved since we started using Recruito",
+    image: "https://i.pravatar.cc/400",
   },
   {
     name: "John Smith",
     role: "Manager, Sales",
     feedback:
-      "I highly recommend Recruito AI. It’s intuitive and has made hiring so much easier.",
-    image: "https://via.placeholder.com/150",
+      "Recruito has transformed our hiring process! We save countless hours each week The quality of candidates has significantly improved since we started using Recruito",
+    image: "https://i.pravatar.cc/500",
+  },
+  {
+    name: "John Smith",
+    role: "Manager, Sales",
+    feedback:
+      "Recruito has transformed our hiring process! We save countless hours each week The quality of candidates has significantly improved since we started using Recruito",
+    image: "https://i.pravatar.cc/340",
   },
 ];

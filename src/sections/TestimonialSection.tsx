@@ -2,27 +2,40 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { testimonials } from "../constants";
+import { motion } from "framer-motion";
 
 const TestimonialSection: React.FC = () => {
   return (
     <div className="py-12 bg-gray-100">
-      {/* Button */}
-      <div className="text-center mb-6">
-        <button className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg">
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="px-6 py-2 rounded-full text-darkBlue font-medium mx-auto border border-neutralGray inline-block">
           Testimonials
-        </button>
-      </div>
+        </div>
+      </motion.div>
 
-      {/* Title */}
-      <div className="text-center max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">
+      <motion.div
+        className="text-center max-w-4xl mx-auto mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+      >
+        <h2 className="text-5xl font-semibold mb-6">
           Don’t just take our word for it—see what our clients say about
           Recruito AI.
         </h2>
-      </div>
+      </motion.div>
 
-      {/* Swiper */}
-      <div className="max-w-full px-6">
+      <motion.div
+        className="max-w-full px-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
+      >
         <Swiper
           pagination={{ clickable: true }}
           spaceBetween={30}
@@ -35,7 +48,12 @@ const TestimonialSection: React.FC = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white shadow-lg rounded-lg p-6">
+              <motion.div
+                className="bg-white border border-neutralGray/20 rounded-lg p-6 h-[231px] w-[582px]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+              >
                 <div className="flex items-center mb-4">
                   <img
                     src={testimonial.image}
@@ -43,18 +61,27 @@ const TestimonialSection: React.FC = () => {
                     className="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
-                    <h3 className="text-lg font-semibold">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-gray-500">{testimonial.role}</p>
+                    <h3 className=" font-semibold">{testimonial.name}</h3>
+                    <p className="text-gray-500 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-700">{testimonial.feedback}</p>
-              </div>
+                <p className="text-darkGray bg-lightGray/20 rounded-lg p-5 h-28 mt-6">
+                  <div className="text-ellipsis line-clamp-3">
+                    {testimonial.feedback}
+                  </div>
+                </p>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+        <motion.img
+          className="mx-auto mt-12 w-12"
+          src="benfits/swipe_indicator.svg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 1 }}
+        />
+      </motion.div>
     </div>
   );
 };
