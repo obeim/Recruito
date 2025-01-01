@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import BenefitsSection from "./sections/BenfitsSection";
@@ -9,6 +10,10 @@ import TestimonialSection from "./sections/TestimonialSection";
 import TrustedSection from "./sections/TrustedSection";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="w-full overflow-hidden">
       <img
