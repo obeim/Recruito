@@ -1,50 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-interface Feature {
-  title: string;
-  description: string;
-  imagePosition: "left" | "right";
-  image: string;
-}
-
-const features: Feature[] = [
-  {
-    title: "Candidate Sourcing & Job Posting",
-    description:
-      "Easily post jobs and source candidates for your positions with our intuitive and powerful recruitment platform.",
-    imagePosition: "right",
-    image: "features/candidate-sourcing-image.png", // Replace with your image path
-  },
-  {
-    title: "Automated Resume Screening & Filtering",
-    description:
-      "Our AI-powered tools evaluate resumes, highlighting only the most relevant candidates to streamline your hiring process.",
-    imagePosition: "left",
-    image: "features/resume-screening-image.png",
-  },
-  {
-    title: "Online Assessment",
-    description:
-      "Evaluate candidates' skills with job-related tests and behavioral evaluations. Transparent scores help make informed decisions.",
-    imagePosition: "right",
-    image: "features/online-assessment-image.png",
-  },
-  {
-    title: "AI Video Interviews",
-    description:
-      "Streamline your hiring process with automated AI video interviews to assess communication and soft skills.",
-    imagePosition: "left",
-    image: "features/video-interviews-image.png",
-  },
-  {
-    title: "Final Shortlist for the Line Manager",
-    description:
-      "Every step of the recruitment process is designed to provide your team with the best candidates, ready for final review.",
-    imagePosition: "right",
-    image: "features/final-shortlist-image.png",
-  },
-];
+import { features } from "../constants";
 
 const FeaturesSection: React.FC = () => {
   return (
@@ -53,7 +9,7 @@ const FeaturesSection: React.FC = () => {
         className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
       >
         <div className="px-6 py-2 rounded-full text-darkBlue font-medium mx-auto border border-neutralGray inline-block">
           Features
@@ -63,7 +19,7 @@ const FeaturesSection: React.FC = () => {
         className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
       >
         <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 w-[90%] md:w-[80%] mx-auto">
           Streamline your recruitment with our advanced features
@@ -78,7 +34,7 @@ const FeaturesSection: React.FC = () => {
             } items-center`}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             {/* Text Content */}
             <div className="lg:w-1/2 p-6 text-center lg:text-left">
@@ -97,7 +53,7 @@ const FeaturesSection: React.FC = () => {
                 className="max-w-full rounded-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               />
             </div>
           </motion.div>

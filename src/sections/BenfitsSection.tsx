@@ -1,60 +1,61 @@
 import React from "react";
+import { benefits } from "../constants";
 
-interface Benefit {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const benefits: Benefit[] = [
-  {
-    title: "Automate Processes",
-    description:
-      "Let Recruito handle resume screening, scheduling, and interviews so you can focus on strategic decisions.",
-    icon: "path/to/automate-icon.svg", // Replace with your icon path
-  },
-  {
-    title: "Provide Instant Information",
-    description:
-      "Quickly access relevant candidate data, ensuring no talent is overlooked in your search.",
-    icon: "path/to/information-icon.svg",
-  },
-  {
-    title: "Make Data-Driven Decisions",
-    description:
-      "Utilize analytics to rank candidates based on key metrics, providing unbiased recommendations for your hiring team.",
-    icon: "path/to/data-driven-icon.svg",
-  },
-];
+import { motion } from "framer-motion";
 
 const BenefitsSection: React.FC = () => {
   return (
-    <div className="bg-gray-900 py-16 px-4 sm:px-8 lg:px-16 text-white">
-      <div className="text-center mb-12">
-        <p className="text-teal-400 text-sm font-medium uppercase">Benefits</p>
-        <h2 className="text-3xl font-bold">
+    <motion.div
+      className="bg-gray-900 py-16 px-4 sm:px-8 lg:px-16 text-white relative no select-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <img src="benfits/benfits_bg.png" className="absolute right-0 top-0" />
+      <img src="benfits/benfits_bg2.png" className="absolute left-0 top-0" />
+
+      <div className="text-center mb-12 relative z-10">
+        <motion.p
+          className="text-aquaGreen text-sm font-medium uppercase border border-neutralGray/20 rounded-full inline-block px-5 py-2 mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Benefits
+        </motion.p>
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Unlock the advantages of using Recruito AI for your hiring needs.
-        </h2>
+        </motion.h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex flex-wrap justify-center gap-8 items-center">
         {benefits.map((benefit, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-gray-800 rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+            className="bg-darkSky cursor-pointer w-full sm:w-[48%] md:w-[30%] lg:w-[27%] xl:w-[383px] xl:h-[276px] rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow border border-neutralGray/20 flex flex-col items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="flex justify-center mb-4">
               <img
                 src={benefit.icon}
                 alt={benefit.title}
-                className="h-12 w-12 text-teal-400"
+                className="h-14 w-14 text-teal-400"
               />
             </div>
             <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
             <p className="text-gray-400">{benefit.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
