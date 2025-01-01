@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import BenefitsSection from "./sections/BenfitsSection";
+import FAQSection from "./sections/FaqsSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import HeroSection from "./sections/HeroSection";
 import TestimonialSection from "./sections/TestimonialSection";
@@ -22,6 +23,7 @@ function App() {
         <TrustedSection />
         <FeaturesSection />
         <BenefitsSection />
+        <FAQSection />
         <TestimonialSection />
       </div>
     </div>

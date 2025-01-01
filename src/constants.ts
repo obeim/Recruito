@@ -118,3 +118,43 @@ export const testimonials: Testimonial[] = [
     image: "https://i.pravatar.cc/340",
   },
 ];
+
+interface FAQItem {
+  question: string;
+  answer: string; // Markup string
+}
+export const faqItems: FAQItem[] = [
+  {
+    question: "What is an AI Agent?",
+    answer: `
+      <p>
+        An AI agent is a software system that understands language, learns from data, and takes actions automatically to achieve specific goals.
+        In the hiring world, an AI agent can review resumes, interact with candidates, and provide recommendations, all without manual oversight.
+      </p>
+      <ul>
+        <li>Natural Language Processing to interpret resumes and candidate responses</li>
+        <li>Adaptive Learning to improve accuracy and efficiency over time</li>
+        <li>Task Automation to handle repetitive or time-consuming steps</li>
+        <li>Data-Driven Insights for better predictions and decisions</li>
+      </ul>
+    `,
+  },
+  {
+    question: "What are the Benefits of Using Recruito’s AI Agent?",
+    answer: `
+      <p>
+        Using Recruito’s AI Agent helps streamline the hiring process, reduces time spent on manual tasks,
+        enhances decision-making with data-driven insights, and improves the candidate experience.
+      </p>
+    `,
+  },
+  {
+    question: "Next Steps?",
+    answer: `
+      <p>
+        Contact us to learn more about implementing Recruito’s AI Agent into your hiring workflow.
+        Get started today and see the difference!
+      </p>
+    `,
+  },
+];

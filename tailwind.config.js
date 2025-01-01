@@ -13,6 +13,7 @@ export default {
         aquaGreen: "#1BD1C2",
         darkSky: "#152232",
         lightGray: "#E6E8EC",
+        darkBlueGray: "#0B1928",
       },
     },
   },

@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 const TestimonialSection: React.FC = () => {
   return (
-    <div className="py-12 bg-gray-100">
+    <div className="py-12 ">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="px-6 py-2 rounded-full text-darkBlue font-medium mx-auto border border-neutralGray inline-block">
+        <div className="px-6 py-2 rounded-full text-darkBlue font-medium mx-auto border border-neutralGray/20 inline-block">
           Testimonials
         </div>
       </motion.div>
